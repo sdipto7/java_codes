@@ -1,14 +1,16 @@
 package compilerdesign.cse420_labMid;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
-import java.io.*;
-import java.util.regex.Pattern;
 import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Task2 {
 
     public static void main(String[] args) throws FileNotFoundException, IOException {
-        File file = new File("C:\\Users\\DIPTO\\Documents\\NetBeansProjects\\java_codes\\src\\compilerdesign.cse420_labMid\\task2_input.txt");
+        File file = new File("src/compilerdesign/cse420_labMid/task2_input.txt");
         Scanner input = new Scanner(file);
         int count = 0;
 

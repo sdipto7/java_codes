@@ -6,16 +6,18 @@
 package compilerdesign.cse420_lab04;
 
 /**
- *
  * @author DIPTO
  */
-import java.util.*;
-import java.io.*;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) throws FileNotFoundException, IOException {
-        File file = new File("C:\\Users\\DIPTO\\Documents\\NetBeansProjects\\java_codes\\src\\compilerdesign.cse420_lab04\\input.txt");
+        File file = new File("src/compilerdesign/cse420_lab04/input.txt");
         Scanner input = new Scanner(file);
         while (input.hasNextLine()) {
             String line = input.nextLine();
@@ -28,7 +30,7 @@ public class Main {
                         String[] words = methods[0].split(" ");
 //                        System.out.println(words[0]+"         "+words[1]);
                         int len = words.length;
-                        System.out.println("Method: "+words[len-1]+"("+methods[1]+" \nReturn Type: "+words[len-2]+" \n");
+                        System.out.println("Method: " + words[len - 1] + "(" + methods[1] + " \nReturn Type: " + words[len - 2] + " \n");
                     }
                     ++i;
                 }
