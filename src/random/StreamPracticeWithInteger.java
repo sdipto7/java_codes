@@ -18,7 +18,7 @@ public class StreamPracticeWithInteger {
         //Converting a List into a Stream and printing the entire Stream using forEach() method
         List<Integer> numberList = Arrays.asList(1, 2, 2, 3, 4, 5, 6);
         System.out.println("The Stream: ");
-        numberList.stream().forEach(System.out::print);
+        numberList.forEach(System.out::print);
         System.out.println();
         lineBreak();
 
@@ -81,7 +81,6 @@ public class StreamPracticeWithInteger {
         System.out.println(String.format("Minimum number in the stream: %1$d", summaryStatistics.getMin()));
         System.out.println(String.format("Sum number in the stream: %1$d", summaryStatistics.getSum()));
         System.out.println(String.format("Average number in the stream: %1$.2f", summaryStatistics.getAverage()));
-        lineBreak();
     }
 
     public static void lineBreak() {
