@@ -3,14 +3,14 @@ package problemsolvingtechniques;
 public class IntReverse {
 
     public static void main(String[] args) {
-        System.out.println(String.format("Reversed Number of %d is: %d", 6125, getReversedNumber(6125)));
-        System.out.println(String.format("Reversed Number of %d is: %d", -6125, getReversedNumber(-6125)));
-        System.out.println(String.format("Reversed Number of %d is: %d", 1234, getReversedNumber(1234)));
-        System.out.println(String.format("Reversed Number of %d is: %d", -1234, getReversedNumber(-1234)));
-        System.out.println(String.format("Reversed Number of %d is: %d", 1221, getReversedNumber(1221)));
-        System.out.println(String.format("Reversed Number of %d is: %d", -1221, getReversedNumber(-1221)));
-        System.out.println(String.format("Reversed Number of %d is: %d", -1, getReversedNumber(-1)));
-        System.out.println(String.format("Reversed Number of %d is: %d", -10, getReversedNumber(-10)));
+        printNumber(6125, getReversedNumber(6125));
+        printNumber(-6125, getReversedNumber(-6125));
+        printNumber(1234, getReversedNumber(1234));
+        printNumber(-1234, getReversedNumber(-1234));
+        printNumber(1221, getReversedNumber(1221));
+        printNumber(-1221, getReversedNumber(-1221));
+        printNumber(-1, getReversedNumber(-1));
+        printNumber(-10, getReversedNumber(-10));
     }
 
     private static int getReversedNumber(int number) {
@@ -27,5 +27,9 @@ public class IntReverse {
         }
 
         return isNegativeNumber ? (-1) * reversedNumber : reversedNumber;
+    }
+
+    private static void printNumber(int number, int reversedNumber) {
+        System.out.println(String.format("Reversed Number of %d is: %d", number, reversedNumber));
     }
 }
