@@ -16,15 +16,12 @@ public class ListConversion {
         List<String> stringList = getStringList();
 
         System.out.println(Arrays.toString(convertListToIntArray(list)));
-
         System.out.println(Arrays.toString(convertListToIntegerArray(list)));
 
         System.out.println(convertListToSet(list));
-
         System.out.println(getSetOfOddNumbersFromList(list));
 
         System.out.println(convertListToMapWithLongFrequencyAsValues(list));
-
         System.out.println(convertListToMapWithIntegerFrequencyAsValues(list));
 
         System.out.println(convertStringListToIntegerList(stringList));

@@ -16,13 +16,11 @@ public class SetConversion {
         Set<Employee> employeeSet = getEmployeeSet();
 
         System.out.println(Arrays.toString(convertSetToIntArray(set)));
-
         System.out.println(Arrays.toString(convertSetToIntegerArray(set)));
 
         System.out.println(convertSetToList(set));
 
         System.out.println(convertStringSetToIntegerSet(stringSet));
-
         System.out.println(convertEmployeeSetToMap(employeeSet));
     }
 
