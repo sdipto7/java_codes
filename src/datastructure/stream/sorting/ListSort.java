@@ -22,6 +22,7 @@ public class ListSort {
         return list.stream()
 //                .sorted() // Ascending order sort
 //                .sorted(Integer::compareTo) // Ascending order sort
+//                .sorted(Collections.reverseOrder()) // Descending order sort
                 .sorted(Comparator.comparing(Integer::intValue, Collections.reverseOrder())) // Descending order sort
                 .collect(Collectors.toList());
     }
