@@ -13,12 +13,7 @@ public class ListConversion {
         list.add(3, null);
         list.add(5, null);
 
-        List<String> stringList = new ArrayList<>();
-        stringList.add("1");
-        stringList.add("7");
-        stringList.add(null);
-        stringList.add("3");
-        stringList.add("5");
+        List<String> stringList = getStringList();
 
         System.out.println(Arrays.toString(convertListToIntArray(list)));
 
@@ -66,5 +61,16 @@ public class ListConversion {
     private static List<Integer> convertStringListToIntegerList(List<String> list) {
 //        return list.stream().filter(Objects::nonNull).map(Integer::valueOf).collect(Collectors.toCollection(ArrayList::new));
         return list.stream().filter(Objects::nonNull).map(Integer::parseInt).collect(Collectors.toCollection(ArrayList::new));
+    }
+
+    private static List<String> getStringList() {
+        List<String> stringList = new ArrayList<>();
+        stringList.add("1");
+        stringList.add("7");
+        stringList.add(null);
+        stringList.add("3");
+        stringList.add("5");
+
+        return stringList;
     }
 }
