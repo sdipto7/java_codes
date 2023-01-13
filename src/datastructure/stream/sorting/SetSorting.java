@@ -21,6 +21,7 @@ public class SetSorting {
     private static Set<Integer> sortSet(Set<Integer> set) {
 //        return new TreeSet<>(set);
         return set.stream()
+//                .sorted() // Ascending order sort
 //                .sorted(Integer::compareTo) // Ascending order sort
                 .sorted(Comparator.comparing(Integer::intValue, Collections.reverseOrder())) // Descending order sort
                 .collect(Collectors.toCollection(LinkedHashSet::new));
