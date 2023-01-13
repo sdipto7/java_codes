@@ -12,8 +12,10 @@ public class MapSorting {
         System.out.println(sortMapByValues(map));
     }
 
+    /* Collecting to HashMap after sorting does not guarantee the sorting order.
+     * LinkedHashMap preserves the insertion order after sorting.
+     */
     private static Map<Integer, Integer> sortMapByKeys(Map<Integer, Integer> map) {
-//        return new TreeMap<>(map);
         return map.entrySet()
                 .stream()
 //                .sorted(Map.Entry.comparingByKey())
@@ -24,6 +26,9 @@ public class MapSorting {
                         (oldValue, newValue) -> oldValue, LinkedHashMap::new));
     }
 
+    /* Collecting to HashMap after sorting does not guarantee the sorting order.
+     * LinkedHashMap preserves the insertion order after sorting.
+     */
     private static Map<Integer, Integer> sortMapByValues(Map<Integer, Integer> map) {
         return map.entrySet()
                 .stream()
